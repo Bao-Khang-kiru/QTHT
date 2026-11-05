@@ -1,0 +1,1456 @@
+{
+  "title": "Đề thi thử Quản trị hệ thống (Linux / CentOS)",
+  "code": "CO3013 / IT3010",
+  "system": "Hệ thống Quản lý Học tập & Thi Trực tuyến ELSE (BK-LMS)",
+  "department": "Khoa Khoa học & Kỹ thuật Máy tính",
+  "term": "Học kỳ 2 / Năm học 2025 - 2026",
+  "description": "Đề thi trắc nghiệm gồm 50 câu hỏi bao quát toàn diện kiến thức Quản trị hệ thống: Hệ điều hành Linux/CentOS, Quản lý tiến trình & Daemon, Cấu hình mạng & Tường lửa, Quản lý tài khoản & Phân quyền, Hệ thống tập tin & Phân vùng.",
+  "durationMinutes": 50,
+  "totalQuestions": 50,
+  "maxScore": 10.0,
+  "passingScore": 5.0,
+  "questions": [
+    {
+      "id": 1,
+      "topic": "Hệ thống tập tin & Ổ đĩa",
+      "prompt": "Tập tin nào sau đây liệt kê các hệ thống tập tin sẽ được gắp kết (mount) tự động vào hệ\nthống tập tin root khi khởi động máy tính Linux/CentOS?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "/dev/inittab"
+        },
+        {
+          "key": "b",
+          "text": "/dev/fstab"
+        },
+        {
+          "key": "c",
+          "text": "/etc/fstab"
+        },
+        {
+          "key": "d",
+          "text": "/etc/inittab"
+        }
+      ],
+      "answer": "c",
+      "answer_text": "c. `/etc/fstab`",
+      "explanation": "Tập tin `/etc/fstab` (File Systems Table) chứa thông tin cấu hình các phân vùng và hệ thống tập tin được gắn kết (mount) tự động khi khởi động hệ thống Linux.",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 2,
+      "topic": "Người dùng, Nhóm & Phân quyền",
+      "prompt": "Với nội dung tập tin /etc/group như sau thì phát biểu nào sau đây là SAI?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "Mã số nhóm (GID) của nhóm tuanthai là 501"
+        },
+        {
+          "key": "b",
+          "text": "Người dùng tmtuan và tuanthai thuộc nhóm wheel"
+        },
+        {
+          "key": "c",
+          "text": "Nhóm người dùng tmtuan chứa người dùng tuanthai"
+        },
+        {
+          "key": "d",
+          "text": "Nhóm người dùng tmtuan chứa người dùng tmtuan"
+        }
+      ],
+      "answer": "c",
+      "answer_text": "c. Nhóm người dùng `tmtuan` chứa người dùng `tuanthai`",
+      "explanation": "Dựa vào dòng `tmtuan:x:500:`, nhóm `tmtuan` chỉ là nhóm chính (primary group) của user `tmtuan` và không có thành viên phụ nào được liệt kê ở trường thứ 4.",
+      "image": "assets/images/q2_group.png",
+      "imageBase64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOUAAABECAIAAADx62UKAAANyElEQVR4nO2de1AT1xfHrySBlIFa8UFNoLyHBNSGRFAoUEAbGFFqLY/yqFQgGNqZdIqtQNVaho4U2ioMjmO1ZLQTClPtHxZqrQlQRybY1lqgMA5YCCUEEB8UjAF5paP391tTkl2SEALR+/nr7tmz594shzt3d797FgAA7ty+pSYkPj6+rKxMPWc8PT1pj7hx48bcoyEWCuPyoaysLD4+fo5dWwEzcuPGja6urvmL39TUlJqa6uvrS6fT+/v7Mfv09HR+fr6Pjw+TyTxw4MDU1NSsoZqbm+l0uv5dG+pvKprnuV8TxmcymWFhYXMMQgZPEEql0sfHJzg4+OOPP9a0f/XVV2fOnPnyyy/JZDKfz1+5cqVAIFi4YT6lbHrEHIM8nl/ZbHZdXZ3mPqlUunbtWtgeGRnZuXOnu7s7l8uVy+XQODU1VVRU5Ofn5+bmlpiY2NvbS2wn5uYjsE2VShUUFPT111/DzYqKioCAgHv37uH5AwCCg4NzcnKCgoJmRBaJRGlpaSEhIYGBgTwe75tvviHot7u7m06nb9myBQBAf0RycjIAQCKRBAUFbdq0icPhCIVCHx+fV199dXJyEs8fAJCQkHD06FHY/u6770JDQ2G7pqYmMjLSzc2NyWS+++67SqUS8z9w4EBCQoKPj4/medZJ9zz3SxAfLx/w4v/www8wQkJCAjBhvra2tmrua2lpYbFYsF1ZWZmcnHzhwgUSiVRaWgqNRUVFFy9ePHXqVENDg5OTU0ZGBrGdmJSUlMTERGzT1tb2yJEjhw4d6unp6evrKygoOHz4sL29PZ4/HiqVqrOzk81mw00OhyOXy4eHh/HiuLq6KhSK8+fPAwAUj6ioqIC7BgcHjx8/7unpKRKJfvzxx97e3qtXrxL44zE8PCwQCKRS6blz52QyWX5+PrarpqamuLi4paXF0dERO886cZ3nfonj68wHvPjR0dEKhSIvLw/MmcfrARaL1dzcDACoqqqanp5OSkr6888//fz84N6oqKjIyEj4v1hVVQUAGB8fFwqFFRUVL774IgDg4MGDDAajq6vLyclJp93d3d3QwW3YsCEpKSk7O9va2jo2NjY4ONiIX3j37l0AgIODQ2Zm5sTERE5OzsNLzDt3li5damioF154wcvLi8Vi3bx508XFxcvLS3OVrD/YRLV69epdu3Z9/vnn2K6tW7e6uLgAACIjI0UikRHBzdOvdj4QxzcVj/OVzWbDgYpEIrVaDfP19ddfh3udnZ1hw97efnR0FAAgk8lGR0d37NihGW5wcHBiYkKnfdZ8FYvF2sacnJxNmzZNTk6Wl5fr40+Ao6Pj5OSknv3qxMbGBgBgbW2NNcbGxoDhyGSy4uLi5ubm0dHRsbExKpWK7Vq1ahVsPPPMM/A8mxCZ6frVzgfi+KbP13Xr1ikUip6eHjKZTKFQent7ZTIZNr9aWT1eOajVaqzd0tKyfPlyzYjt7e067cbR399/69bD2229vb1eXl5GRHBwcICzbEFBAQCgsbERAGCSsc04FdosWbJE23N6ejoxMTEwMPD06dNLly6tra0tKioiPsRQlsx/v9r5QBzf9PlqZ2fn5eVVXl4eGBhIpVJPnjzp7Oy8bNkyvCPd3NyoVOpvv/0WFRWlj/1//ZHJS5Ys0TktwYseR0dHzDI1NSUQCJKTk21sbAQCQXV1NZlMJvDXia2trYeHx7Vr1+DNlGvXrjk7O2suBnTGIZFI8G+g+YchQKc/lUp98OABbA8ODsJGf3+/XC7//vvv4ZR2+/ZtfeLDf7nJyUlsIjRPv/qfB6N/l0H8ZxAsFquysjIkJCQ0NLSyshK7RtGJtbX1W2+9tX///vr6+r6+vkuXLvH5fAI7hEQiMRiMqqqqgYEBzYsenddPx44dGxoaysnJyc7OHh8fn3H9oe2vUqna2to6OzsBAB0dHW1tbRMTE3BdJRQKGxoaGhsbT5w4kZSURBwHAECj0aysrM6fPz86OqpzFaGP/5o1a2pra8fGxu7cuXPmzBloXLFihZ2dXUNDA7wGP3XqFNCPrKwsLpdr5n71Pw9G/y7j85XNZk9NTa1fv37dunUkEgm7OYDHhx9++MYbb3zwwQcbN27cu3cvNkXh2SGFhYW1tbUcDiczM5Mg+PXr1488wsbGhkKhlJSUHDt2DF4R4tHa2srlcrOysgAASUlJXC53YGAAAMDj8eLi4ng83q5du2JiYt55551Zz4uDg8PevXtzc3M9PT1TU1ON88/IyKBSqSwWKy0tDd4YgovgsrKyzz77zN/f/7333tMnOESpVK5evdrM/ep/Hgjih4aG0un0wsLChoYGeGPLuOvUh+sW+DzWYfkK445HmIexsTFvb++ysrKYmJin+Zyb9Xkswmjgsnvr1q1P+TlE8yvCkkDzK8KSQPmKsCRQviIsCZSvCEvOV0vRKRtEVlYWXYP6+npiHbcR+m6EeXii9NoExMbGYo8noBCJQMeN9N2LGvj+lkwmo/2XpKQktVotFosDAwMjIiLYbHZ5eTmTyYyJiZmYmMDzn/F+z9mzZ0NCQmC7urqay+W6uroyGAyBQHDv3j3Mf//+/fHx8Uwm85VXXunp6dF8ZWfgEdjm/fv3oagCbopEIn9//5GRETx/tVrN5/Pz8/O1XwYKCQn54osvsLeLNmzYQGzHi48wG4/zFdLU1ESj0TQ9xGKxh4dHR0dHfHx8eHh4d3c3m81ubGzE8yfIV5FIVFNT09fX197evm3btvfffx/zZ7FY3d3dExMTKSkpe/bs0Yy2efPm8PBwTcuVK1e8vb3//vtvhULh7e19+fJlYn8+n89kMl1cXNhsdklJyfT0NMx7Go1WX18PfaRSKY1G++eff/DsBPERZoNsiTplQ3XcXC43Li7OwcFBKpUWFRVRqdTdu3fj6bitra1Npe9GmBzy4tcpz13H/dprr8EGi8W6detWRUXF7t27Z9Vxz13fjVgs11sLrlM2WsfNYDDge0h4Om4KhTJ/+m6Eie9nYfpcPY/X6U+gF87Ly/Py8lq1apX+el7t92AxHXd6erpAIJgxC2r7a9LR0fH8889r6rihHdNx49n1jI8wa74uQp3yHHXcSqUyNzf3559/bm5uPnnypFAo3LlzJ9yFp+M2Qt+NWJj1AKbPHRoaCgsLm/UVYZ3+GRkZUqmUxWJ5e3tv2bKluroa0/MePHiwsLDQyckpNTVVKBQaMWKo4/7222/hYrqkpGT79u2bN2+Gr+NqQ6FQurq6+Hy+SqWi0Wi5ubnY++U8Hm9gYIDH46nV6ri4OEzHjWdHLDhIT4iwJJB+AGFJoHxFWBIoXxGWBMpXhCWB8hVhSSyKfNWs/6g/R48enXt9RsTTpde29HrNJtF349X1Rpgc8lNer9kk+m68ut6IeZxfn5h6zXOv0w0FLr7/x87OjrhON15db4L4COMh1mubVn+NF3/NmjUXLlxob2+PiorC/PHiE39vxMz6buyo1tZWGo3W19c363gQRkN+Guo1z6u+G+m4zQn5yavXvFD6boPGg5jH+1kE+msqlXr69Omffvrpo48+0tRZm6peM158Q4H67rt37+r5sRoMBoMBi3Jq6rsLCwuHhoaQjnvh59cnoF6zaet0a+u78ep06z8exPzqtS2rXrP59d14db3xxoOYX722CfXX+uvBCeKHhobC5IC3xgAAV69e1a49bTZ9d2trK7bkhUl85coVbEWOMCFIr42wJBaFfgCB0BOUrwhLAuUrwpJA+YqwJFC+Ip6yfEW6acQC5Gt/fz+dTsfq8LS1tdHp9O7ubuN009PT02vXrmUwGAY9ajezzrq0tPTll192cXHx8/P79NNPzTlUxILptXXqpn///XcSiUSlUn/55ZeXXnoJmAuDdNaXL1/m8Xi+vr4dHR379u2jUCh79uwx21AR87UeMEI3LZFIwsLCIiIiNNVJOnXcC6izPnv2bEpKip+fX0JCQmxsbG1tLcF4EBaTr8PDwwKBQCqVnjt3TiaT5efnQ3t0dLRCocjLy9M+RCwWR0REhIeHSyQSTXtNTU1xcXFLS4ujoyPxc3xbW9sjR44cOnSop6enr6+voKDg8OHD9vb2eP6QqqoqV1dXDodTWloK9VwqlaqzsxP71jiHw5HL5TM+DQ4AePDgwQxJCnrubwHrgW3btmk7Gaqblsvlf/31V2hoKJlMlsvlnZ2dHh4ei62Otqa0qqurq7q6Wh9dOWJx5WtpaSmTyQQAdHZ2wg+zG6GblkgkLBbrueeeAwD4+/vDLyAs2jraw8PD6enpb7/99saNG2cdD2Jx5au7u7uvr6+mhbgutk7EYvEff/zh5uYGtacAAD6fv9jqaEM3lUr15ptvBgQEZGdn6x8csXjvDxiqm75//35jY+Px48e9vb3h3JyRkTEyMvLss88uNp31+Ph4WloajUYrLCzUZzwIC8hXTDe9Y8cOfXTTly5dIpFIkZGRMLfc3d1tbW3r6uq2b99OfGBKSsrU1FRdXZ22ztrKyurixYulpaWa95tm+CuVyk8++SQqKmrZsmW//vqrUCjct28f3JWcnFxWVhYQEEAikU6cOJGeng7tmZmZN2/ezM3NvX79+sNzQSbD/zG88SAsIF8N1U1LJJL169djE6GVlVVgYKBEIpk1X82ss56cnIQr1OjoaOi2cuXKpqYmgwaJMDNIr42wJJDeBWFJoHxFWBIoXxGWBMpXhCWB8hUBLIh/AfAnq3EDzV+UAAAAAElFTkSuQmCC",
+      "points": 0.2
+    },
+    {
+      "id": 3,
+      "topic": "Người dùng, Nhóm & Phân quyền",
+      "prompt": "Với nội dung của tập tin /etc/shadow như sau, mật khẩu của\ncác tmtuan và tuanthai được băm (hash) bởi giải thuật nào?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "SHA-512 và MD5"
+        },
+        {
+          "key": "b",
+          "text": "MD5"
+        },
+        {
+          "key": "c",
+          "text": "SHA-512"
+        },
+        {
+          "key": "d",
+          "text": "SHA-512 và RSA"
+        }
+      ],
+      "answer": "a",
+      "answer_text": "a. SHA-512 và MD5",
+      "explanation": "Trong `/etc/shadow`, tiền tố `$6$` của `tmtuan` đại diện cho thuật toán băm **SHA-512**, còn tiền tố `$1$` của `tuanthai` đại diện cho thuật toán băm **MD5**.",
+      "image": "assets/images/q3_shadow.png",
+      "imageBase64": "data:image/png;base64,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",
+      "points": 0.2
+    },
+    {
+      "id": 4,
+      "topic": "Quản trị hệ thống & Công nghệ",
+      "prompt": "Công nghệ nào có những ưu điểm sau: tăng hiệu suất sử dụng tài nguyên máy tính,\ngiảm chi phí quản lý phần cứng và phần mềm, cung cấp môi trường an toàn cho việc\nthử nghiệm các ứng dụng không tin cậy.",
+      "choices": [
+        {
+          "key": "a",
+          "text": "Tính toán lưới (grid computing)"
+        },
+        {
+          "key": "b",
+          "text": "Hệ điều hành Linux"
+        },
+        {
+          "key": "c",
+          "text": "Trung tâm dữ liệu (data center)"
+        },
+        {
+          "key": "d",
+          "text": "Ảo hóa (virtualization)"
+        }
+      ],
+      "answer": "d",
+      "answer_text": "d. Ảo hóa (virtualization)",
+      "explanation": "Ảo hóa cho phép chạy nhiều máy ảo độc lập trên cùng một phần cứng vật lý, tối ưu tài nguyên, giảm chi phí và tạo môi trường cô lập an toàn (sandbox) để thử nghiệm.",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 5,
+      "topic": "Mạng máy tính & Giao thức",
+      "prompt": "Loại cáp nào được sử dụng trong chuẩn mạng 10Base-T",
+      "choices": [
+        {
+          "key": "a",
+          "text": "Cáp đồng trục (coaxial cable)"
+        },
+        {
+          "key": "b",
+          "text": "Chuẩn 10Base-T không sử dụng cáp"
+        },
+        {
+          "key": "c",
+          "text": "Cáp quang (fiber-optic cable)"
+        },
+        {
+          "key": "d",
+          "text": "Cáp xoắn đôi (twisted-pair cable)"
+        }
+      ],
+      "answer": "d",
+      "answer_text": "d. Cáp xoắn đôi (twisted-pair cable)",
+      "explanation": "Chữ **T** trong chuẩn `10Base-T` viết tắt của *Twisted-pair* (cáp xoắn đôi).",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 6,
+      "topic": "Người dùng, Nhóm & Phân quyền",
+      "prompt": "Lệnh nào sau đây hiển thị thông tin về tài khoản người dùng tmtuan",
+      "choices": [
+        {
+          "key": "a",
+          "text": "chmod -e tmtuan"
+        },
+        {
+          "key": "b",
+          "text": "usermod -e tmtuan"
+        },
+        {
+          "key": "c",
+          "text": "chown -l tmtuan"
+        },
+        {
+          "key": "d",
+          "text": "chage -l tmtuan"
+        }
+      ],
+      "answer": "d",
+      "answer_text": "d. `chage -l tmtuan`",
+      "explanation": "Lệnh `chage -l <username>` (trong đề hiển thị chữ `l` in hoa/thường tùy font là `-I`/`-l`) dùng để liệt kê thông tin thời hạn mật khẩu và tài khoản của người dùng.",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 7,
+      "topic": "Quản trị hệ thống & Tiến trình",
+      "prompt": "Với kết quả của lệnh crontab -l như sau, phát biểu nào sau đây là ĐÚNG?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "Thư mục /data sẽ tạo mới vào 00:00 giờ chủ nhật hằng tuần"
+        },
+        {
+          "key": "b",
+          "text": "Thư mục /data sẽ được xóa ngày thứ hai hằng tuần"
+        },
+        {
+          "key": "c",
+          "text": "Công cụ nano sẽ được cập nhật vào lúc 8:30 ngày 15 và 30 hàng tháng"
+        },
+        {
+          "key": "d",
+          "text": "Công cụ nano được gở bỏ vào tháng 1 hằng năm"
+        }
+      ],
+      "answer": "b",
+      "answer_text": "b. Thư mục `/data` sẽ được xóa ngày thứ hai hằng tuần",
+      "explanation": "Dòng cấu hình `0 0 * * 1 root (rm -r /data; mkdir /data)` có trường thứ 5 (ngày trong tuần) là `1` (Thứ Hai). Lệnh sẽ chạy lúc 00:00 Thứ Hai hàng tuần để xóa `/data` và tạo lại. (Lưu ý: Dòng trên có số `1` ở trường tháng nên chỉ chạy vào tháng 1, do đó câu c sai).",
+      "image": "assets/images/q7_crontab.png",
+      "imageBase64": "data:image/png;base64,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",
+      "points": 0.2
+    },
+    {
+      "id": 8,
+      "topic": "Quản trị hệ thống & Tiến trình",
+      "prompt": "Phát biểu nào sau đây là ĐÚNG về các tiến trình daemon?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "Là các tiến trình có tên kết thúc bằng ký tự d"
+        },
+        {
+          "key": "b",
+          "text": "Là các tiến trình chạy nền, thường có tên kết thúc bằng ký tự d"
+        },
+        {
+          "key": "c",
+          "text": "Là các tiến trình đặc biệt của hệ thống dùng để quản lý các tiến trình khác"
+        },
+        {
+          "key": "d",
+          "text": "Là các tiến trình con đã chết/kết thúc thực thi trước tiến trình cha 0:57:58"
+        }
+      ],
+      "answer": "b",
+      "answer_text": "b. Là các tiến trình chạy nền, thường có tên kết thúc bằng ký tự d",
+      "explanation": "Daemon là các tiến trình chạy ngầm (background) phục vụ hệ thống và theo quy ước thường kết thúc bằng chữ `d` (như `httpd`, `sshd`, `crond`).",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 9,
+      "topic": "Mạng máy tính & Dịch vụ",
+      "prompt": "Giải pháp nào nên được sử dụng để cấu hình mạng cho một số lượng lớn máy tính?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "DHCP (Dynamic Host Configuration Protocol)"
+        },
+        {
+          "key": "b",
+          "text": "NAT (Network Address Translation)"
+        },
+        {
+          "key": "c",
+          "text": "Web proxy"
+        },
+        {
+          "key": "d",
+          "text": "Cấu hình tĩnh (static/manual configuration)"
+        }
+      ],
+      "answer": "a",
+      "answer_text": "a. DHCP (Dynamic Host Configuration Protocol)",
+      "explanation": "DHCP dùng để cấp phát cấu hình mạng (IP, Subnet mask, Gateway, DNS) tự động cho số lượng lớn máy trạm.",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 10,
+      "topic": "Mạng máy tính & Dịch vụ",
+      "prompt": "Phát biểu nào về dịch vụ tên miền DNS (domain name system) là SAI?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "Dịch vụ DNS hoạt động ở cổng 53"
+        },
+        {
+          "key": "b",
+          "text": "Một máy chủ DNS chỉ có thể phân giải một tên miền"
+        },
+        {
+          "key": "c",
+          "text": "Dịch vụ DNS phân giải địa chỉ IP sang tên miền"
+        },
+        {
+          "key": "d",
+          "text": "Dịch vụ DNS phân giải tên miền sang địa chỉ IP"
+        }
+      ],
+      "answer": "b",
+      "answer_text": "b. Một máy chủ DNS chỉ có thể phân giải một tên miền",
+      "explanation": "Một máy chủ DNS có thể quản lý và phân giải cho hàng ngàn tên miền (zones) khác nhau chứ không giới hạn ở một tên miền.",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 11,
+      "topic": "Bảo mật & Dịch vụ Mạng",
+      "prompt": "Dịch vụ nào cho phép quản trị máy chủ từ xa",
+      "choices": [
+        {
+          "key": "a",
+          "text": "TCP/IP"
+        },
+        {
+          "key": "b",
+          "text": "HTTPS"
+        },
+        {
+          "key": "c",
+          "text": "SSH"
+        },
+        {
+          "key": "d",
+          "text": "Remote management"
+        }
+      ],
+      "answer": "c",
+      "answer_text": "c. SSH",
+      "explanation": "SSH (Secure Shell) là dịch vụ mạng cho phép điều khiển và quản trị máy chủ từ xa qua dòng lệnh một cách an toàn.",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 12,
+      "topic": "Hệ thống tập tin & Ổ đĩa",
+      "prompt": "Chuẩn nào sau đây KHÔNG phải là một chuẩn giao tiếp đĩa cứng (disk interface)",
+      "choices": [
+        {
+          "key": "a",
+          "text": "SCSI"
+        },
+        {
+          "key": "b",
+          "text": "IDE"
+        },
+        {
+          "key": "c",
+          "text": "ZFS"
+        },
+        {
+          "key": "d",
+          "text": "USB"
+        }
+      ],
+      "answer": "c",
+      "answer_text": "c. ZFS",
+      "explanation": "ZFS là một hệ thống tập tin (File System) kiêm quản lý ổ đĩa logic, không phải chuẩn giao tiếp phần cứng như SCSI, IDE hay USB.",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 13,
+      "topic": "Mạng máy tính & Giao thức",
+      "prompt": "Một máy tính được cấu hình địa chỉ IP: 172.30.119.100/16. Phát biểu nào sau đây là\nSAI?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "Địa chỉ broadcast của máy là 172.30.255.255"
+        },
+        {
+          "key": "b",
+          "text": "Mặt nạ mạng (subnet mask) của máy là 255.255.255.0"
+        },
+        {
+          "key": "c",
+          "text": "Địa chỉ IP của máy là 172.30.119.100"
+        },
+        {
+          "key": "d",
+          "text": "Địa chỉ mạng của máy là 172.30.0.0"
+        }
+      ],
+      "answer": "b",
+      "answer_text": "b. Mặt nạ mạng (subnet mask) của máy là `255.255.255.0`",
+      "explanation": "Tiền tố `/16` tương ứng với subnet mask là `255.255.0.0`, không phải `255.255.255.0` (`/24`).",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 14,
+      "topic": "Mạng máy tính & Giao thức",
+      "prompt": "Chuẩn mạng nào sau đây KHÔNG phải chuẩn mạng không dây (wireless network)?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "Wi-Fi"
+        },
+        {
+          "key": "b",
+          "text": "Ethernet"
+        },
+        {
+          "key": "c",
+          "text": "WiMax"
+        },
+        {
+          "key": "d",
+          "text": "Bluetooth 0:57:15"
+        }
+      ],
+      "answer": "b",
+      "answer_text": "b. Ethernet",
+      "explanation": "Ethernet (IEEE 802.3) là chuẩn mạng có dây (LAN) phổ biến nhất.",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 15,
+      "topic": "Người dùng, Nhóm & Phân quyền",
+      "prompt": "Thuộc tính nào của tiến trình được sử dụng trong hầu hết các kiểm tra điều khiển truy\ncập?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "Niceness"
+        },
+        {
+          "key": "b",
+          "text": "Saved User ID (SUID)"
+        },
+        {
+          "key": "c",
+          "text": "Real User ID (RUID)"
+        },
+        {
+          "key": "d",
+          "text": "Effective User ID (EUID)"
+        }
+      ],
+      "answer": "d",
+      "answer_text": "d. Effective User ID (EUID)",
+      "explanation": "Nhân Linux sử dụng **EUID** (Effective UID) của tiến trình để quyết định quyền truy cập tài nguyên và tập tin tại thời điểm thực thi.",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 16,
+      "topic": "Hệ thống tập tin & Ổ đĩa",
+      "prompt": "Phát biểu nào sau đây là ĐÚNG về lệnh fdisk?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "Nó dùng để kiểm tra và sửa chữa một hoặc nhiều hệ thống tập tin"
+        },
+        {
+          "key": "b",
+          "text": "Nó được sử dụng để xây dựng một hệ thống tập tin trên một thiết bị, thường là một phân khu đĩa cứng"
+        },
+        {
+          "key": "c",
+          "text": "Nó được sử dụng để tạo, thay đổi, xóa hoặc hiển thị các phân khu hiện có trên một đĩa cứng"
+        },
+        {
+          "key": "d",
+          "text": "Nó được dùng để xóa nhanh chóng tất cả các tập tin lưu trữ trên đĩa cứng 0:57:06"
+        }
+      ],
+      "answer": "c",
+      "answer_text": "c. Nó được sử dụng để tạo, thay đổi, xóa hoặc hiển thị các phân khu hiện có trên một đĩa cứng",
+      "explanation": "`fdisk` là công cụ quản lý phân vùng (partition) trên ổ đĩa.",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 17,
+      "topic": "Người dùng, Nhóm & Phân quyền",
+      "prompt": "Với thông tin 2 thư mục sharedata và sharedoc như sau, phát biểu nào sau đây\nlà ĐÚNG? Biết rằng người tmtuan thuộc nhóm người dùng quantri.",
+      "choices": [
+        {
+          "key": "a",
+          "text": "Người dùng tmtuan có quyền write trên thư mục sharedoc"
+        },
+        {
+          "key": "b",
+          "text": "Tất cả các người dùng thuộc nhóm quantri có quyền write trên thư mục sharedoc"
+        },
+        {
+          "key": "c",
+          "text": "Người dùng tmtuan là chủ sở hữu của thư mục sharedoc"
+        },
+        {
+          "key": "d",
+          "text": "Người dùng tmtuan có quyền write trên thư mục sharedata"
+        }
+      ],
+      "answer": "d",
+      "answer_text": "d. Người dùng `tmtuan` có quyền write trên thư mục `sharedata`",
+      "explanation": "Thư mục `sharedata` có chủ sở hữu là `tmtuan` với bộ quyền của chủ sở hữu là `rwx` (đọc, ghi, thực thi). Còn trên `sharedoc`, nhóm `quantri` chỉ có quyền `r-x` (không có quyền ghi `w`).",
+      "image": "assets/images/q17_sharedoc_ls.png",
+      "imageBase64": "data:image/png;base64,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",
+      "points": 0.2
+    },
+    {
+      "id": 18,
+      "topic": "Người dùng, Nhóm & Phân quyền",
+      "prompt": "Với thông tin thư mục sharedoc như sau, lệnh nào sau đây sẽ cấp cho người\ndùng tuanthai có cả 3 quyền read,write,execute trên thư mục sharedoc? Biết rằng\nngười dùng tuanthai KHÔNG thuộc nhóm quantri.",
+      "choices": [
+        {
+          "key": "a",
+          "text": "chmod g+w sharedoc"
+        },
+        {
+          "key": "b",
+          "text": "chown tuanthai sharedoc"
+        },
+        {
+          "key": "c",
+          "text": "usermod -aG quantri tuanthai"
+        },
+        {
+          "key": "d",
+          "text": "chmod 775 sharedoc"
+        }
+      ],
+      "answer": "b",
+      "answer_text": "b. `chown tuanthai sharedoc`",
+      "explanation": "Vì `tuanthai` không thuộc nhóm `quantri`, việc đổi chủ sở hữu thư mục `sharedoc` sang cho `tuanthai` (`chown tuanthai sharedoc`) sẽ giúp người dùng này hưởng quyền của chủ sở hữu hiện tại là `rwx` (cả 3 quyền read, write, execute).",
+      "image": "assets/images/q18_sharedoc_perm.png",
+      "imageBase64": "data:image/png;base64,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",
+      "points": 0.2
+    },
+    {
+      "id": 19,
+      "topic": "Quản trị hệ thống & Lệnh Shell",
+      "prompt": "Lệnh nào sau đây tìm kiếm tất cả các tập tin, thư mục có tên bắt đầu bằng 2 ký\ntự da trong thư mục cá nhân (home directory) của người dùng?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "find da* /home"
+        },
+        {
+          "key": "b",
+          "text": "ls da* /"
+        },
+        {
+          "key": "c",
+          "text": "ls da /home"
+        },
+        {
+          "key": "d",
+          "text": "find da* ~"
+        }
+      ],
+      "answer": "d",
+      "answer_text": "d. `find da ~` (hoặc theo cú pháp trong đề)",
+      "explanation": "Ký hiệu `~` đại diện cho thư mục cá nhân (home directory) của người dùng hiện hành. Trong các lựa chọn được đưa ra, chỉ có câu **d** chỉ định đúng thư mục cá nhân `~` với lệnh `find`.",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 20,
+      "topic": "Tổng quan Hệ điều hành Linux",
+      "prompt": "Phát biểu nào về hệ điều hành Linux sau là SAI?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "Linux là một hệ điều hành mã nguồn mở"
+        },
+        {
+          "key": "b",
+          "text": "Hệ điều hành Red Hat là một bản phân phối của hệ điều hành Linux"
+        },
+        {
+          "key": "c",
+          "text": "Linux được phát triển từ mã nguồn của hệ điều hành UNIX"
+        },
+        {
+          "key": "d",
+          "text": "Linux ra đời từ một dự án cá nhân của Linus Torvalds"
+        }
+      ],
+      "answer": "c",
+      "answer_text": "c. Linux được phát triển từ mã nguồn của hệ điều hành UNIX",
+      "explanation": "Linux được Linus Torvalds viết mới hoàn toàn từ đầu (from scratch) dựa trên cảm hứng từ MINIX và tuân theo chuẩn POSIX/UNIX, chứ không sử dụng mã nguồn gốc của UNIX thương mại.",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 21,
+      "topic": "Mạng máy tính & Giám sát",
+      "prompt": "Với thông tin của nối kết mạng eth0 như hình bên dưới. Phát biểu nào sau đây là SAI?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "Địa chỉ mạng của eth0 là 10.0.2.0"
+        },
+        {
+          "key": "b",
+          "text": "eth0 đã nhận 7289 gói tin"
+        },
+        {
+          "key": "c",
+          "text": "Địa chỉ IP của eth0 là 10.0.2.15"
+        },
+        {
+          "key": "d",
+          "text": "Địa chỉ MAC của eth0 là 08:00:27:E2:47:08"
+        }
+      ],
+      "answer": "b",
+      "answer_text": "b. `eth0` đã nhận 7289 gói tin",
+      "explanation": "Trong kết quả `ifconfig`, `RX packets: 14707` là số gói tin đã **nhận** (Receive), còn `7289` là `TX packets` — số gói tin đã **gửi** (Transmit).",
+      "image": "assets/images/q21_ifconfig.png",
+      "imageBase64": "data:image/png;base64,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",
+      "points": 0.2
+    },
+    {
+      "id": 22,
+      "topic": "Bảo mật & Tường lửa iptables",
+      "prompt": "Với kết quả của lệnh iptables -L --line-numbers như bên dưới, lệnh nào sẽ cho\nphép CHỈ máy tính có địa chỉ 192.168.0.10 ping tới hệ thống?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "iptables -D INPUT 2 iptables -I INPUT 4 -p icmp -j ACCEPT"
+        },
+        {
+          "key": "b",
+          "text": "iptables -A INPUT -p icmp -s 192.168.0.10 -j ACCEPT"
+        },
+        {
+          "key": "c",
+          "text": "iptables -I INPUT 1 -p icmp -s 192.168.0.10 -j ACCEPT"
+        },
+        {
+          "key": "d",
+          "text": "iptables -I INPUT 5 -p icmp -s 192.168.0.10 -j ACCEPT iptables -D INPUT 2"
+        }
+      ],
+      "answer": "d",
+      "answer_text": "d. `iptables -I INPUT 5 -p icmp -s 192.168.0.10 -j ACCEPT` và `iptables -D INPUT 2`",
+      "explanation": "Luật số 2 hiện tại cho phép mọi máy (`anywhere`) ping (`icmp`) vào hệ thống, và luật số 5 chặn tất cả các gói tin còn lại (`REJECT`). Do đó, cần chèn luật cho phép IP `192.168.0.10` vào vị trí trước luật chặn (vị trí 5) và xóa luật số 2 đi.",
+      "image": "assets/images/q22_iptables.png",
+      "imageBase64": "data:image/png;base64,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",
+      "points": 0.2
+    },
+    {
+      "id": 23,
+      "topic": "Quản trị hệ thống & Tiến trình",
+      "prompt": "Lệnh nào sau đây tạm dừng tất cả các tiến trình có tên là httpd",
+      "choices": [
+        {
+          "key": "a",
+          "text": "killall -s STOP httpd"
+        },
+        {
+          "key": "b",
+          "text": "kill -s KILL | pgrep httpd"
+        },
+        {
+          "key": "c",
+          "text": "killall -s KILL httpd"
+        },
+        {
+          "key": "d",
+          "text": "kill -s STOP httpd"
+        }
+      ],
+      "answer": "a",
+      "answer_text": "a. `killall -s STOP httpd`",
+      "explanation": "Lệnh `killall` tác động lên các tiến trình theo tên, và tín hiệu `STOP` (`SIGSTOP`) dùng để tạm dừng tiến trình.",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 24,
+      "topic": "Quản trị hệ thống & Nhật ký",
+      "prompt": "Lệnh nào cho biết người dùng nào mới vừa đăng nhập vào hệ thống?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "cat /var/log/wtmp | tail -n 1"
+        },
+        {
+          "key": "b",
+          "text": "last | tail -n 1"
+        },
+        {
+          "key": "c",
+          "text": "cat /var/log/wtmp | head -n 1"
+        },
+        {
+          "key": "d",
+          "text": "last | head -n 1"
+        }
+      ],
+      "answer": "d",
+      "answer_text": "d. `last | head -n 1`",
+      "explanation": "Lệnh `last` đọc file `/var/log/wtmp` (định dạng nhị phân nên không dùng `cat` trực tiếp được) và liệt kê lịch sử đăng nhập theo thứ tự **mới nhất ở trên cùng**, do đó dùng `head -n 1` để lấy người vừa đăng nhập gần nhất.",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 25,
+      "topic": "Quản trị hệ thống & Khởi động",
+      "prompt": "Phát biểu nào sau đây là SAI?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "GRUB cho phép nạp và khởi động các hệ điều hành khác nhau có trên hệ thống"
+        },
+        {
+          "key": "b",
+          "text": "Lệnh shutdown -r now sẽ khởi động lại hệ thống ngay lập tức"
+        },
+        {
+          "key": "c",
+          "text": "Lệnh telinit 3 sẽ tắt (shutdown) hệ thống"
+        },
+        {
+          "key": "d",
+          "text": "MBR (master boot record) là sector đầu tiên của ổ đĩa cứng"
+        }
+      ],
+      "answer": "c",
+      "answer_text": "c. Lệnh `telinit 3` sẽ tắt (shutdown) hệ thống",
+      "explanation": "Runlevel 3 là chế độ đa người dùng giao diện dòng lệnh có mạng (Full multiuser text mode). Để tắt hệ thống phải dùng `telinit 0`.\n\n---\n\n### Từ câu 26 đến câu 50",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 26,
+      "topic": "Mạng máy tính & Giám sát",
+      "prompt": "Lệnh nào cho phép liệt kê các nối kết mạng vào/ra trên một máy tính sử dụng hệ điều\nhành Linux?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "wireshark"
+        },
+        {
+          "key": "b",
+          "text": "ping"
+        },
+        {
+          "key": "c",
+          "text": "netstat"
+        },
+        {
+          "key": "d",
+          "text": "traceroute"
+        }
+      ],
+      "answer": "c",
+      "answer_text": "c. `netstat`",
+      "explanation": "`netstat` (Network Statistics) dùng để hiển thị các kết nối mạng vào/ra, bảng định tuyến và các cổng đang lắng nghe trên Linux.",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 27,
+      "topic": "Mạng máy tính & Cấu hình",
+      "prompt": "CentOS lưu tập tin cấu hình giao tiếp mạng trong thư mục nào sau đây?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "/etc/"
+        },
+        {
+          "key": "b",
+          "text": "/etc/sysconfig/network-scripts/"
+        },
+        {
+          "key": "c",
+          "text": "/var/network-scripts/"
+        },
+        {
+          "key": "d",
+          "text": "/etc/network/"
+        }
+      ],
+      "answer": "b",
+      "answer_text": "b. `/etc/sysconfig/network-scripts/`",
+      "explanation": "Trên các bản phân phối họ Red Hat/CentOS, cấu hình card mạng (`ifcfg-eth0`,...) được lưu tại `/etc/sysconfig/network-scripts/`.",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 28,
+      "topic": "Hệ thống tập tin & Ổ đĩa",
+      "prompt": "Chuẩn nào sau đầy là hệ thống tập tin tiêu chuẩn của các hệ điều hành Windows?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "ext3"
+        },
+        {
+          "key": "b",
+          "text": "JFS"
+        },
+        {
+          "key": "c",
+          "text": "NTFS"
+        },
+        {
+          "key": "d",
+          "text": "ext4"
+        }
+      ],
+      "answer": "c",
+      "answer_text": "c. NTFS",
+      "explanation": "NTFS (New Technology File System) là hệ thống tập tin tiêu chuẩn của hệ điều hành Windows hiện đại (ext3, ext4, JFS là của Linux/UNIX).",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 29,
+      "topic": "Người dùng, Nhóm & Phân quyền",
+      "prompt": "Phát biểu nào sau đây là ĐÚNG?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "Trường thứ hai trong tập tin /etc/passwd chứa các mật khẩu được mã hóa của các người dùng"
+        },
+        {
+          "key": "b",
+          "text": "Linux hỗ trợ các tính năng liên quan đến \"tuổi\" của mật khẩu (password aging) được quản lý thông qua lệnh passwd"
+        },
+        {
+          "key": "c",
+          "text": "Người dùng có thể dụng lệnh passwd để thay đổi mật khẩu của chính họ"
+        },
+        {
+          "key": "d",
+          "text": "Người dùng root không thể thay đổi mật khẩu cho một người dùng quản trị (superuser) khác"
+        }
+      ],
+      "answer": "c",
+      "answer_text": "c. Người dùng có thể dùng lệnh `passwd` để thay đổi mật khẩu của chính họ",
+      "explanation": "Bất kỳ người dùng thông thường nào cũng có thể gõ `passwd` để tự đổi mật khẩu của mình (nhờ cơ chế SUID trên file thực thi `/usr/bin/passwd`).",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 30,
+      "topic": "Mạng máy tính & Giao thức",
+      "prompt": "Thông tin nào dùng để phân biệt các dịch vụ (service) mạng khác nhau trên một máy\ntính?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "Địa chỉ MAC"
+        },
+        {
+          "key": "b",
+          "text": "Tên miền (domain name)"
+        },
+        {
+          "key": "c",
+          "text": "Cổng (port)"
+        },
+        {
+          "key": "d",
+          "text": "Địa chỉ IPv6"
+        }
+      ],
+      "answer": "c",
+      "answer_text": "c. Cổng (port)",
+      "explanation": "Số hiệu cổng (Port number) ở tầng giao vận dùng để định danh và phân biệt các dịch vụ/ứng dụng mạng khác nhau chạy trên cùng một máy chủ.",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 31,
+      "topic": "Quản trị hệ thống & Quy trình",
+      "prompt": "Công việc nào KHÔNG phải là một trong ba công việc chính của người quản trị hệ\nthống trong việc quản trị máy trạm (desktop)",
+      "choices": [
+        {
+          "key": "a",
+          "text": "Nâng cấp hệ thống (hệ điều hành, phần mềm, ...)"
+        },
+        {
+          "key": "b",
+          "text": "Cài đặt ban đầu (hệ điều hành, phần mềm, ...)"
+        },
+        {
+          "key": "c",
+          "text": "Cấu hình mạng"
+        },
+        {
+          "key": "d",
+          "text": "Lắp ráp, sửa chữa phần cứng"
+        }
+      ],
+      "answer": "d",
+      "answer_text": "d. Lắp ráp, sửa chữa phần cứng",
+      "explanation": "Ba giai đoạn chính trong vòng đời quản trị máy trạm của SysAdmin là: Cài đặt ban đầu, Cấu hình mạng/hệ thống, và Nâng cấp/bảo trì phần mềm hệ thống. Sửa chữa phần cứng vật lý là công việc của kỹ thuật viên phần cứng.",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 32,
+      "topic": "Người dùng, Nhóm & Phân quyền",
+      "prompt": "Phát biểu nào sau đây là SAI về quyền trên tập tin/thư mục?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "\"-rwxr-x-r-x\": là một tập hợp quyền thích hợp cho một shell script mà bạn viết và muốn tất cả các người dùng khác có thể thực thi"
+        },
+        {
+          "key": "b",
+          "text": "\"drwxr-x---\": cho phép tất cả các người dùng liệt kê nội dung của thư mục này"
+        },
+        {
+          "key": "c",
+          "text": "\"-r--r--r--\": là chỉ đọc (read-only) cho tất cả các người dùng"
+        },
+        {
+          "key": "d",
+          "text": "\"drwx------\": là các quyền thích hợp cho một thư mục chứa thông tin cá nhân của bạn"
+        }
+      ],
+      "answer": "b",
+      "answer_text": "b. `\"drwxr-x---\"`: cho phép tất cả các người dùng liệt kê nội dung của thư mục này",
+      "explanation": "Ba ký tự cuối cùng (quyền của `others` - những người dùng khác) là `---`, nghĩa là những người dùng ngoài nhóm hoàn toàn không có quyền đọc (`r`) hay truy cập (`x`) để liệt kê thư mục này.",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 33,
+      "topic": "Hệ thống tập tin & Ổ đĩa",
+      "prompt": "Công nghệ nào ghép nhiều ổ đĩa cứng vật lí thành một hệ thống ổ đĩa cứng có chức\nnăng làm tăng tốc độ đọc/ghi hoặc làm tăng tính an toàn cho dữ liệu chứa trên hệ thống\nổ đĩa hoặc là kết hợp cả hai yếu tố trên?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "SCSI (Small Computer Systems Interface)"
+        },
+        {
+          "key": "b",
+          "text": "SSD (Solid-state drive)"
+        },
+        {
+          "key": "c",
+          "text": "Sao lưu dữ liệu (data backup)"
+        },
+        {
+          "key": "d",
+          "text": "RAID (Redundant Arrays of Independent Disks)"
+        }
+      ],
+      "answer": "d",
+      "answer_text": "d. RAID (Redundant Arrays of Independent Disks)",
+      "explanation": "Công nghệ RAID ghép nhiều ổ đĩa vật lý thành một ổ đĩa logic nhằm tăng tốc độ đọc/ghi (Striping) và/hoặc tăng tính dự phòng an toàn dữ liệu (Mirroring/Parity).",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 34,
+      "topic": "Người dùng, Nhóm & Phân quyền",
+      "prompt": "Lệnh nào sau đây cho phép đưa người dùng tmtuan ra khỏi nhóm wheel",
+      "choices": [
+        {
+          "key": "a",
+          "text": "userdel -d wheel tmtuan"
+        },
+        {
+          "key": "b",
+          "text": "gpasswd -d tmtuan wheel"
+        },
+        {
+          "key": "c",
+          "text": "usermod -aG tmtuan wheel"
+        },
+        {
+          "key": "d",
+          "text": "userdel -d tmtuan wheel"
+        }
+      ],
+      "answer": "b",
+      "answer_text": "b. `gpasswd -d tmtuan wheel`",
+      "explanation": "Lệnh `gpasswd -d <user> <group>` được sử dụng để xóa một người dùng ra khỏi một nhóm cụ thể.",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 35,
+      "topic": "Quản trị hệ thống & Dịch vụ",
+      "prompt": "Lệnh nào cho phép xem trạng thái của dịch httpd?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "systemctl status httpd"
+        },
+        {
+          "key": "b",
+          "text": "service httpd start"
+        },
+        {
+          "key": "c",
+          "text": "systemctl restart httpd"
+        },
+        {
+          "key": "d",
+          "text": "service httpd restart"
+        }
+      ],
+      "answer": "a",
+      "answer_text": "a. `systemctl status httpd`",
+      "explanation": "Tùy chọn `status` của lệnh `systemctl` (hoặc `service httpd status`) dùng để kiểm tra trạng thái hoạt động hiện tại của dịch vụ.",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 36,
+      "topic": "Quản trị hệ thống & Khởi động",
+      "prompt": "Bạn chỉ muốn đăng nhập vào máy tính Linux/CentOS với tư cách người dùng root cho\nviệc bảo trì hệ thống. Bạn sẽ khởi động máy tính vào runlevel nào?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "1"
+        },
+        {
+          "key": "b",
+          "text": "3"
+        },
+        {
+          "key": "c",
+          "text": "0"
+        },
+        {
+          "key": "d",
+          "text": "2"
+        }
+      ],
+      "answer": "a",
+      "answer_text": "a. `1`",
+      "explanation": "Runlevel 1 là chế độ **Single-user mode** (chế độ đơn người dùng / bảo trì), chỉ cho phép tài khoản `root` đăng nhập trực tiếp và không khởi chạy các dịch vụ mạng.",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 37,
+      "topic": "Bảo mật & Dịch vụ SSH",
+      "prompt": "Để CHỈ cho phép những người dùng thuộc nhóm người dùng bangiamdoc truy cập từ\nxa tới hệ thống thông qua dịch vụ ssh, chúng ta phải?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "Thêm dòng AllowGroups bangiamdoc vào tập tin /etc/ssh/sshd_config"
+        },
+        {
+          "key": "b",
+          "text": "Thêm dòng DenyGroups bangiamdoc vào tập tin /etc/ssh/sshd_config"
+        },
+        {
+          "key": "c",
+          "text": "Thêm dòng AllowUsers bangiamdoc vào tập tin /etc/ssh/sshd_config"
+        },
+        {
+          "key": "d",
+          "text": "Thêm dòng DenyUsers bangiamdoc vào tập tin /etc/ssh/sshd_config"
+        }
+      ],
+      "answer": "a",
+      "answer_text": "a. Thêm dòng `AllowGroups bangiamdoc` vào tập tin `/etc/ssh/sshd_config`",
+      "explanation": "Chỉ thị `AllowGroups <tên_nhóm>` trong `/etc/ssh/sshd_config` giới hạn chỉ những thành viên thuộc nhóm được liệt kê mới có quyền đăng nhập SSH.",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 38,
+      "topic": "Bảo mật & Phân quyền sudo",
+      "prompt": "Phát biểu nào sau đây về lệnh sudo là SAI?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "Các lệnh thực hiện với quyền sudo sẽ KHÔNG được ghi nhật ký (log) lại"
+        },
+        {
+          "key": "b",
+          "text": "Có thể giới hạn quyền sudo của người dùng chỉ có thể thực hiện các thao tác về mạng (networking)"
+        },
+        {
+          "key": "c",
+          "text": "Lệnh sudo cho phép người dùng thực thi các lệnh với quyền của một người dùng khác"
+        },
+        {
+          "key": "d",
+          "text": "Với lệnh sudo chúng ta không cần phải chia sẻ mật khẩu tài khoàn root cho nhiều người"
+        }
+      ],
+      "answer": "a",
+      "answer_text": "a. Các lệnh thực hiện với quyền `sudo` sẽ KHÔNG được ghi nhật ký (log) lại",
+      "explanation": "Mọi thao tác sử dụng `sudo` đều được hệ thống ghi nhật ký rất chi tiết (vào `/var/log/secure` trên CentOS) để phục vụ việc kiểm toán an ninh, nên phát biểu nói KHÔNG ghi log là sai.",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 39,
+      "topic": "Bảo mật & Phân quyền sudo",
+      "prompt": "Với nội dung tập tin /etc/sudoers như bên dưới, lệnh nào sau đây có thể cho người\ndùng tmtuan có quyền sudo? Biết rằng nhóm người dùng wheel, bangiamdoc,\nsudo đã được tạo sẵn.",
+      "choices": [
+        {
+          "key": "a",
+          "text": "usermod -aG sudo tmtuan"
+        },
+        {
+          "key": "b",
+          "text": "usermod -aG wheel tmtuan"
+        },
+        {
+          "key": "c",
+          "text": "usermod -aG bangiamdoc tmtuan"
+        },
+        {
+          "key": "d",
+          "text": "usermod -aG tmtuan wheel"
+        }
+      ],
+      "answer": "a",
+      "answer_text": "a. `usermod -aG sudo tmtuan`",
+      "explanation": "Trong đoạn cấu hình `/etc/sudoers`:\n* Dòng `# %wheel` bị đóng chú thích (`#`) nên không có tác dụng.\n\n* Dòng `bangiamdoc` không có ký hiệu `%` ở đầu nên đây là cấu hình cho **user** tên là `bangiamdoc`, không phải group.\n\n* Chỉ có dòng `%sudo ALL=(ALL) ALL` là cấp quyền hợp lệ cho **nhóm** `sudo`. Vì vậy cần thêm `tmtuan` vào nhóm `sudo` bằng lệnh `usermod -aG sudo tmtuan`.",
+      "image": "assets/images/q39_sudoers.png",
+      "imageBase64": "data:image/png;base64,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",
+      "points": 0.2
+    },
+    {
+      "id": 40,
+      "topic": "Mạng máy tính & Phần cứng",
+      "prompt": "Thiết bị mạng nào hoạt động ở tầng Datalink của mô hình TCP/IP, cho phép nối kết\nmạng các thiết bị theo hình sao (star)?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "Firewall"
+        },
+        {
+          "key": "b",
+          "text": "Switch"
+        },
+        {
+          "key": "c",
+          "text": "Router"
+        },
+        {
+          "key": "d",
+          "text": "Hub"
+        }
+      ],
+      "answer": "b",
+      "answer_text": "b. Switch",
+      "explanation": "Switch là thiết bị chuyển mạch hoạt động ở tầng Data Link (Lớp 2), kết nối các thiết bị mạng theo cấu trúc hình sao (Star topology). (Hub hoạt động ở tầng Physical).",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 41,
+      "topic": "Người dùng, Nhóm & Phân quyền",
+      "prompt": "Phát biểu nào sau đây là SAI về tài khoản người dùng?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "Một tài khoản người dùng luôn được kết hợp với một tên người đùng và một số định danh (UID)"
+        },
+        {
+          "key": "b",
+          "text": "Có thể tạo tài khoản người dùng mới có số định danh (UID) trùng với số định danh của người dùng root"
+        },
+        {
+          "key": "c",
+          "text": "Một người dùng khi mới được tạo mặc định không là thành viên của một nhóm (group) nào và có thể được hiệu chỉnh để trở thành thành viên của nhiều nhóm khác nhau"
+        },
+        {
+          "key": "d",
+          "text": "Thông tin tài khoản người dùng cục bộ được lưu trữ trong tập tin /etc/passwd"
+        }
+      ],
+      "answer": "c",
+      "answer_text": "c. Một người dùng khi mới được tạo mặc định không là thành viên của một nhóm (group) nào và có thể được hiệu chỉnh để trở thành thành viên của nhiều nhóm khác nhau",
+      "explanation": "Trong Linux, mọi người dùng khi được tạo ra bắt buộc phải thuộc về ít nhất một nhóm chính (Primary Group - mặc định trong CentOS sẽ tự tạo một nhóm trùng tên với user theo cơ chế UPG).",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 42,
+      "topic": "Bảo mật & Nhật ký hệ thống",
+      "prompt": "Trên hệ điều hành CentOS, tập tin nhật ký (log file) nào chứa thông tin về các sư kiện\nliên quan đến an ninh hệ thống?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "/var/log/messages"
+        },
+        {
+          "key": "b",
+          "text": "/var/log/secure"
+        },
+        {
+          "key": "c",
+          "text": "/etc/log/secure"
+        },
+        {
+          "key": "d",
+          "text": "/etc/log/messages"
+        }
+      ],
+      "answer": "b",
+      "answer_text": "b. `/var/log/secure`",
+      "explanation": "Trên CentOS/RHEL, tập tin `/var/log/secure` chuyên lưu trữ các log liên quan đến xác thực, phân quyền và an ninh hệ thống (như đăng nhập SSH, sử dụng `sudo`, `su`).",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 43,
+      "topic": "Mạng máy tính & Mô hình OSI/TCP",
+      "prompt": "Mô hình mạng TCP/IP bao gồm các tầng theo thứ tự là?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "Application → Transport → Data link →Physical"
+        },
+        {
+          "key": "b",
+          "text": "Application → Network → Data link → Transport →Physical"
+        },
+        {
+          "key": "c",
+          "text": "Application → Network → Data link →Physical"
+        },
+        {
+          "key": "d",
+          "text": "Application → Transport → Network → Data link →Physical"
+        }
+      ],
+      "answer": "d",
+      "answer_text": "d. Application → Transport → Network → Data link → Physical",
+      "explanation": "Thứ tự chuẩn của mô hình TCP/IP 5 tầng từ trên xuống là: Ứng dụng (Application) → Giao vận (Transport) → Mạng (Network/Internet) → Liên kết dữ liệu (Data link) → Vật lý (Physical).",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 44,
+      "topic": "Quản trị hệ thống & Giám sát",
+      "prompt": "Phát biểu nào về việc theo dõi hệ thống (monitoring) là sau đây SAI?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "Theo dõi hệ thống cung cấp dữ liệu cần thiết cho công việc quản trị hệ thống"
+        },
+        {
+          "key": "b",
+          "text": "Theo dõi hệ thống giúp nhanh chóng phát hiện và xử lý các sự cố trong hệ thống"
+        },
+        {
+          "key": "c",
+          "text": "Theo dõi hệ thống chỉ có thể thực ở chế độ thời gian thực (real-time)"
+        },
+        {
+          "key": "d",
+          "text": "Theo dõi hệ thống giúp dự đoán và tránh những sự cố cho hệ thống trong tương lai"
+        }
+      ],
+      "answer": "c",
+      "answer_text": "c. Theo dõi hệ thống chỉ có thể thực hiện ở chế độ thời gian thực (real-time)",
+      "explanation": "Việc giám sát hệ thống (monitoring) hoàn toàn có thể thực hiện qua việc thu thập dữ liệu lịch sử, phân tích log định kỳ hoặc xem lại báo cáo thống kê chứ không chỉ giới hạn ở thời gian thực.",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 45,
+      "topic": "Mạng máy tính & Giao thức",
+      "prompt": "Giải pháp nào sau đây KHÔNG giải quyết vấn đề thiếu địa chỉ của IPv4?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "DNS"
+        },
+        {
+          "key": "b",
+          "text": "CIDR"
+        },
+        {
+          "key": "c",
+          "text": "IPv6"
+        },
+        {
+          "key": "d",
+          "text": "NAT"
+        }
+      ],
+      "answer": "a",
+      "answer_text": "a. DNS",
+      "explanation": "DNS chỉ làm nhiệm vụ phân giải tên miền sang địa chỉ IP, không giúp tiết kiệm hay mở rộng không gian địa chỉ IPv4 như CIDR, NAT hay IPv6.",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 46,
+      "topic": "Hệ thống tập tin & Khởi động MBR",
+      "prompt": "512B đầu tiên của ổ đĩa khởi động (chế độ BIOS) chứa thông tin gì?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "Chứa đoạn mã kiểm tra lỗi trên ổ đĩa"
+        },
+        {
+          "key": "b",
+          "text": "Chứa đoạn mã đơn giản hóa của nhân hệ điều hành"
+        },
+        {
+          "key": "c",
+          "text": "Chứa bảng phân khu (partition table) và đoạn mã để chạy boot loader"
+        },
+        {
+          "key": "d",
+          "text": "Chứa đoạn mã kiểm tra các thành phần phần cứng máy tính"
+        }
+      ],
+      "answer": "c",
+      "answer_text": "c. Chứa bảng phân khu (partition table) và đoạn mã để chạy boot loader",
+      "explanation": "512 byte đầu tiên của ổ đĩa khởi động theo chuẩn BIOS chính là **MBR (Master Boot Record)**, bao gồm đoạn mã khởi động (Bootstrap code - 446 bytes), bảng phân vùng (Partition table - 64 bytes) và chữ ký boot (2 bytes).",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 47,
+      "topic": "Người dùng, Nhóm & Phân quyền",
+      "prompt": "Lệnh nào sao đây sẽ tự động phân quyền mặc nhiên trên các thư mục mới được tạo\nra:\n+ Chủ sở hữu có cả 3 quyền read, write, execute;\n+ Nhóm chủ sở hữu có quyền read, execute;\n+ Những người khác không có quyền gì.",
+      "choices": [
+        {
+          "key": "a",
+          "text": "chmod 720"
+        },
+        {
+          "key": "b",
+          "text": "umask 720"
+        },
+        {
+          "key": "c",
+          "text": "umask 027"
+        },
+        {
+          "key": "d",
+          "text": "chmod 027"
+        }
+      ],
+      "answer": "c",
+      "answer_text": "c. `umask 027`",
+      "explanation": "Quyền mặc định tối đa của thư mục là `777` (`rwxrwxrwx`). Mong muốn quyền tạo ra là `750` (`rwxr-x---`). Ta lấy `777 - 750 = 027`, vậy lệnh cần dùng là `umask 027`.",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 48,
+      "topic": "Người dùng, Nhóm & Phân quyền",
+      "prompt": "Phát biểu nào sau là SAI?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "Tài khoản root có UID là 0"
+        },
+        {
+          "key": "b",
+          "text": "Không thể có nhiều tài khoản người dùng trùng tên đăng nhập (username)"
+        },
+        {
+          "key": "c",
+          "text": "Không thể đổi UID của tài khoản root"
+        },
+        {
+          "key": "d",
+          "text": "Tên đăng nhập (username) có thể chứa ký tự viết hoa"
+        }
+      ],
+      "answer": "c",
+      "answer_text": "c. Không thể đổi UID của tài khoản root",
+      "explanation": "Về mặt kỹ thuật, hoàn toàn có thể chỉnh sửa UID của tài khoản tên `root` trong tập tin `/etc/passwd` (dù việc này sẽ làm hỏng quyền quản trị của tài khoản đó vì nhân Linux nhận diện superuser qua số UID `0` chứ không qua tên `root`).",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 49,
+      "topic": "Quản trị hệ thống & Gói phần mềm",
+      "prompt": "Phát biểu nào sau đây là SAI?",
+      "choices": [
+        {
+          "key": "a",
+          "text": "Lệnh yum update cập nhật tất cả gói phần mềm có trên hệ thống"
+        },
+        {
+          "key": "b",
+          "text": "Có thể gở bỏ các gói phần mềm đã được cài đặt bằng lệnh yum remove"
+        },
+        {
+          "key": "c",
+          "text": "Có thể tạo kho phần mềm (repository) riêng thay vì dùng các kho phần mềm có sẵn"
+        },
+        {
+          "key": "d",
+          "text": "Các gói phần mềm trên hệ điều hành Red Hat/CentOS có định dạng là deb"
+        }
+      ],
+      "answer": "d",
+      "answer_text": "d. Các gói phần mềm trên hệ điều hành Red Hat/CentOS có định dạng là `deb`",
+      "explanation": "Red Hat và CentOS sử dụng định dạng gói là **`.rpm`** (Red Hat Package Manager). Định dạng `.deb` thuộc về nhánh Debian/Ubuntu.",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    },
+    {
+      "id": 50,
+      "topic": "Đạo đức & Trách nhiệm nghề nghiệp",
+      "prompt": "Các phát biểu sau đây về trách nhiệm nghề nghiệp của một người quản trị hệ thống là\nĐÚNG (True) hay SAI (False)?\n1) Liên tục học tập kiến thức chuyên môn để thực hiện tốt công việc\n2) Tuyệt đối tôn trọng quyền riêng tư về thông tin và dữ liệu của các người dùng khác\ntrong hệ thống\n3) Tuân thủ các qui trình làm việc để tránh các sự cố nghề nghiệp.",
+      "choices": [
+        {
+          "key": "True",
+          "text": "Đúng (True)"
+        },
+        {
+          "key": "False",
+          "text": "Sai (False)"
+        }
+      ],
+      "answer": "True",
+      "answer_text": "Đúng (True)",
+      "explanation": "Cả 3 phát biểu về việc liên tục trau dồi chuyên môn, tôn trọng quyền riêng tư dữ liệu người dùng và tuân thủ quy trình làm việc đều là các chuẩn mực đạo đức và trách nhiệm nghề nghiệp cốt lõi của người quản trị hệ thống (System Administrator).",
+      "image": null,
+      "imageBase64": null,
+      "points": 0.2
+    }
+  ]
+}

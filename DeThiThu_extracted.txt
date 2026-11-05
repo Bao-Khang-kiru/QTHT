@@ -1,0 +1,778 @@
+=== PAGE 1 ===
+Tập tin nào sau đây liệt kê các hệ thống tập tin sẽ được gắp kết (mount) tự động vào hệ 
+thống tập tin root khi khởi động máy tính Linux/CentOS? 
+Câu hỏi 1Select one: 
+a. 
+/dev/inittab 
+b. 
+/dev/fstab 
+c. 
+/etc/fstab 
+d. 
+/etc/inittab 
+Câu hỏi 2 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Với nội dung tập tin /etc/group như sau thì phát biểu nào sau đây là SAI? 
+ 
+Câu hỏi 2Select one: 
+a. 
+Mã số nhóm (GID) của nhóm tuanthai là 501 
+b. 
+Người dùng tmtuan và tuanthai thuộc nhóm wheel 
+c. 
+Nhóm người dùng tmtuan chứa người dùng tuanthai 
+d. 
+Nhóm người dùng tmtuan chứa người dùng tmtuan 
+ 
+Câu hỏi 3 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Với nội dung của tập tin /etc/shadow như sau, mật khẩu của 
+các tmtuan và tuanthai được băm (hash) bởi giải thuật nào? 
+
+=== PAGE 2 ===
+ 
+Câu hỏi 3Select one: 
+a. 
+SHA-512 và MD5 
+b. 
+MD5 
+c. 
+SHA-512 
+d. 
+SHA-512 và RSA 
+Câu hỏi 4 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Công nghệ nào có những ưu điểm sau: tăng hiệu suất sử dụng tài nguyên máy tính, 
+giảm chi phí quản lý phần cứng và phần mềm, cung cấp môi trường an toàn cho việc 
+thử nghiệm các ứng dụng không tin cậy. 
+Câu hỏi 4Select one: 
+a. 
+Tính toán lưới (grid computing) 
+b. 
+Hệ điều hành Linux 
+c. 
+Trung tâm dữ liệu (data center) 
+d. 
+Ảo hóa (virtualization) 
+Câu hỏi 5 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Loại cáp nào được sử dụng trong chuẩn mạng 10Base-T 
+Câu hỏi 5Select one: 
+a. 
+Cáp đồng trục (coaxial cable) 
+
+=== PAGE 3 ===
+b. 
+Chuẩn 10Base-T không sử dụng cáp 
+c. 
+Cáp quang (fiber-optic cable) 
+d. 
+Cáp xoắn đôi (twisted-pair cable) 
+Câu hỏi 6 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Lệnh nào sau đây hiển thị thông tin về tài khoản người dùng tmtuan 
+Câu hỏi 6Select one: 
+a. 
+chmod -e tmtuan 
+b. 
+usermod -e tmtuan 
+c. 
+chown -l tmtuan 
+d. 
+chage -l tmtuan 
+Câu hỏi 7 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Với kết quả của lệnh crontab -l như sau, phát biểu nào sau đây là ĐÚNG? 
+ 
+Câu hỏi 7Select one: 
+a. 
+Thư mục /data sẽ tạo mới vào 00:00 giờ chủ nhật hằng tuần 
+b. 
+Thư mục /data sẽ được xóa ngày thứ hai hằng tuần 
+c. 
+Công cụ nano sẽ được cập nhật vào lúc 8:30 ngày 15 và 30 hàng tháng 
+d. 
+Công cụ nano được gở bỏ vào tháng 1 hằng năm 
+
+=== PAGE 4 ===
+Câu hỏi 8 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Phát biểu nào sau đây là ĐÚNG về các tiến trình daemon? 
+Câu hỏi 8Select one: 
+a. 
+Là các tiến trình có tên kết thúc bằng ký tự d 
+b. 
+Là các tiến trình chạy nền, thường có tên kết thúc bằng ký tự d 
+c. 
+Là các tiến trình đặc biệt của hệ thống dùng để quản lý các tiến trình khác 
+d. 
+Là các tiến trình con đã chết/kết thúc thực thi trước tiến trình cha 
+ 
+0:57:58 
+Câu hỏi 9 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Giải pháp nào nên được sử dụng để cấu hình mạng cho một số lượng lớn máy tính? 
+Câu hỏi 9Select one: 
+a. 
+DHCP (Dynamic Host Configuration Protocol) 
+b. 
+NAT (Network Address Translation) 
+c. 
+Web proxy 
+d. 
+Cấu hình tĩnh (static/manual configuration) 
+Câu hỏi 10 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+=== PAGE 5 ===
+Phát biểu nào về dịch vụ tên miền DNS (domain name system) là SAI? 
+Câu hỏi 10Select one: 
+a. 
+Dịch vụ DNS hoạt động ở cổng 53 
+b. 
+Một máy chủ DNS chỉ có thể phân giải một tên miền 
+c. 
+Dịch vụ DNS phân giải địa chỉ IP sang tên miền 
+d. 
+Dịch vụ DNS phân giải tên miền sang địa chỉ IP 
+Câu hỏi 11 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Dịch vụ nào cho phép quản trị máy chủ từ xa 
+Câu hỏi 11Select one: 
+a. 
+TCP/IP 
+b. 
+HTTPS 
+c. 
+SSH 
+d. 
+Remote management 
+Câu hỏi 12 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Chuẩn nào sau đây KHÔNG phải là một chuẩn giao tiếp đĩa cứng (disk interface) 
+Câu hỏi 12Select one: 
+a. 
+SCSI 
+b. 
+IDE 
+c. 
+ZFS 
+=== PAGE 6 ===
+d. 
+USB 
+Câu hỏi 13 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Một máy tính được cấu hình địa chỉ IP: 172.30.119.100/16. Phát biểu nào sau đây là 
+SAI? 
+Câu hỏi 13Select one: 
+a. 
+Địa chỉ broadcast của máy là 172.30.255.255 
+b. 
+Mặt nạ mạng (subnet mask) của máy là 255.255.255.0 
+c. 
+Địa chỉ IP của máy là 172.30.119.100 
+d. 
+Địa chỉ mạng của máy là 172.30.0.0 
+Câu hỏi 14 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Chuẩn mạng nào sau đây KHÔNG phải chuẩn mạng không dây (wireless network)? 
+Câu hỏi 14Select one: 
+a. 
+Wi-Fi 
+b. 
+Ethernet 
+c. 
+WiMax 
+d. 
+Bluetooth 
+0:57:15 
+Câu hỏi 15 
+Chưa trả lời 
+=== PAGE 7 ===
+Đặt cờ 
+Đoạn văn câu hỏi 
+Thuộc tính nào của tiến trình được sử dụng trong hầu hết các kiểm tra điều khiển truy 
+cập? 
+Câu hỏi 15Select one: 
+a. 
+Niceness 
+b. 
+Saved User ID (SUID) 
+c. 
+Real User ID (RUID) 
+d. 
+Effective User ID (EUID) 
+Câu hỏi 16 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Phát biểu nào sau đây là ĐÚNG về lệnh fdisk? 
+Câu hỏi 16Select one: 
+a. 
+Nó dùng để kiểm tra và sửa chữa một hoặc nhiều hệ thống tập tin 
+b. 
+Nó được sử dụng để xây dựng một hệ thống tập tin trên một thiết bị, thường là một 
+phân khu đĩa cứng 
+c. 
+Nó được sử dụng để tạo, thay đổi, xóa hoặc hiển thị các phân khu hiện có trên một đĩa 
+cứng 
+d. 
+Nó được dùng để xóa nhanh chóng tất cả các tập tin lưu trữ trên đĩa cứng 
+0:57:06 
+Câu hỏi 17 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Với thông tin 2 thư mục sharedata và sharedoc như sau, phát biểu nào sau đây 
+là ĐÚNG? Biết rằng người tmtuan thuộc nhóm người dùng quantri. 
+=== PAGE 8 ===
+ 
+Câu hỏi 17Select one: 
+a. 
+Người dùng tmtuan có quyền write trên thư mục sharedoc 
+b. 
+Tất cả các người dùng thuộc nhóm quantri có quyền write trên thư mục sharedoc 
+c. 
+Người dùng tmtuan là chủ sở hữu của thư mục sharedoc 
+d. 
+Người dùng tmtuan có quyền write trên thư mục sharedata 
+Câu hỏi 18 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Với thông tin thư mục sharedoc như sau, lệnh nào sau đây sẽ cấp cho người 
+dùng tuanthai có cả 3 quyền read,write,execute trên thư mục sharedoc? Biết rằng 
+người dùng tuanthai KHÔNG thuộc nhóm quantri. 
+ 
+Câu hỏi 18Select one: 
+a. 
+chmod g+w sharedoc 
+b. 
+chown tuanthai sharedoc 
+c. 
+usermod -aG quantri tuanthai 
+d. 
+chmod 775 sharedoc 
+Câu hỏi 19 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Lệnh nào sau đây tìm kiếm tất cả các tập tin, thư mục có tên bắt đầu bằng 2 ký 
+tự da trong thư mục cá nhân (home directory) của người dùng? 
+
+=== PAGE 9 ===
+Câu hỏi 19Select one: 
+a. 
+find da* /home 
+b. 
+ls da* / 
+c. 
+ls da /home 
+d. 
+find da* ~ 
+Câu hỏi 20 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Phát biểu nào về hệ điều hành Linux sau là SAI? 
+Câu hỏi 20Select one: 
+a. 
+Linux là một hệ điều hành mã nguồn mở 
+b. 
+Hệ điều hành Red Hat là một bản phân phối của hệ điều hành Linux 
+c. 
+Linux được phát triển từ mã nguồn của hệ điều hành UNIX 
+d. 
+Linux ra đời từ một dự án cá nhân của Linus Torvalds 
+Câu hỏi 21 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Với thông tin của nối kết mạng eth0 như hình bên dưới. Phát biểu nào sau đây là SAI? 
+ 
+
+=== PAGE 10 ===
+Câu hỏi 21Select one: 
+a. 
+Địa chỉ mạng của eth0 là 10.0.2.0 
+b. 
+eth0 đã nhận 7289 gói tin 
+c. 
+Địa chỉ IP của eth0 là 10.0.2.15 
+d. 
+Địa chỉ MAC của eth0 là 08:00:27:E2:47:08 
+Câu hỏi 22 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Với kết quả của lệnh iptables -L --line-numbers như bên dưới, lệnh nào sẽ cho 
+phép CHỈ máy tính có địa chỉ 192.168.0.10 ping tới hệ thống? 
+ 
+Câu hỏi 22Select one: 
+a. 
+iptables -D INPUT 2 
+        iptables -I INPUT 4 -p icmp -j ACCEPT 
+b. 
+iptables -A INPUT -p icmp -s 192.168.0.10 -j ACCEPT 
+c. 
+iptables -I INPUT 1 -p icmp -s 192.168.0.10 -j ACCEPT 
+d. 
+iptables -I INPUT 5 -p icmp -s 192.168.0.10 -j ACCEPT 
+        iptables -D INPUT 2 
+Câu hỏi 23 
+
+=== PAGE 11 ===
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Lệnh nào sau đây tạm dừng tất cả các tiến trình có tên là httpd 
+Câu hỏi 23Select one: 
+a. 
+killall -s STOP httpd 
+b. 
+kill -s KILL  |  pgrep httpd 
+c. 
+killall -s KILL httpd 
+d. 
+kill -s STOP httpd 
+Câu hỏi 24 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Lệnh nào cho biết người dùng nào mới vừa đăng nhập vào hệ thống? 
+Câu hỏi 24Select one: 
+a. 
+cat /var/log/wtmp | tail -n 1 
+b. 
+last | tail -n 1 
+c. 
+cat /var/log/wtmp | head -n 1 
+d. 
+last | head -n 1 
+Câu hỏi 25 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Phát biểu nào sau đây là SAI? 
+Câu hỏi 25Select one: 
+a. 
+GRUB cho phép nạp và khởi động các hệ điều hành khác nhau có trên hệ thống 
+=== PAGE 12 ===
+b. 
+Lệnh shutdown -r now sẽ khởi động lại hệ thống ngay lập tức 
+c. 
+Lệnh telinit 3 sẽ tắt (shutdown) hệ thống 
+d. 
+MBR (master boot record) là sector đầu tiên của ổ đĩa cứng 
+Câu hỏi 26 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Lệnh nào cho phép liệt kê các nối kết mạng vào/ra trên một máy tính sử dụng hệ điều 
+hành Linux? 
+Câu hỏi 26Select one: 
+a. 
+wireshark 
+b. 
+ping 
+c. 
+netstat 
+d. 
+traceroute 
+Câu hỏi 27 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+CentOS lưu tập tin cấu hình giao tiếp mạng trong thư mục nào sau đây? 
+Câu hỏi 27Select one: 
+a. 
+/etc/ 
+b. 
+/etc/sysconfig/network-scripts/ 
+c. 
+/var/network-scripts/ 
+d. 
+/etc/network/ 
+=== PAGE 13 ===
+Câu hỏi 28 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Chuẩn nào sau đầy là hệ thống tập tin tiêu chuẩn của các hệ điều hành Windows? 
+Câu hỏi 28Select one: 
+a. 
+ext3 
+b. 
+JFS 
+c. 
+NTFS 
+d. 
+ext4 
+Câu hỏi 29 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Phát biểu nào sau đây là ĐÚNG? 
+Câu hỏi 29Select one: 
+a. 
+Trường thứ hai trong tập tin /etc/passwd chứa các mật khẩu được mã hóa của các 
+người dùng 
+b. 
+Linux hỗ trợ các tính năng liên quan đến "tuổi" của mật khẩu (password aging) được 
+quản lý thông qua lệnh passwd 
+c. 
+Người dùng có thể dụng lệnh passwd để thay đổi mật khẩu của chính họ 
+d. 
+Người dùng root không thể thay đổi mật khẩu cho một người dùng quản trị (superuser) 
+khác 
+Câu hỏi 30 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+=== PAGE 14 ===
+Thông tin nào dùng để phân biệt các dịch vụ (service) mạng khác nhau trên một máy 
+tính? 
+Câu hỏi 30Select one: 
+a. 
+Địa chỉ MAC 
+b. 
+Tên miền (domain name) 
+c. 
+Cổng (port) 
+d. 
+Địa chỉ IPv6 
+Câu hỏi 31 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Công việc nào KHÔNG phải là một trong ba công việc chính của người quản trị hệ 
+thống trong việc quản trị máy trạm (desktop) 
+Câu hỏi 31Select one: 
+a. 
+Nâng cấp hệ thống (hệ điều hành, phần mềm, ...) 
+b. 
+Cài đặt ban đầu (hệ điều hành, phần mềm, ...) 
+c. 
+Cấu hình mạng 
+d. 
+Lắp ráp, sửa chữa phần cứng 
+Câu hỏi 32 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Phát biểu nào sau đây là SAI về quyền trên tập tin/thư mục? 
+Câu hỏi 32Select one: 
+a. 
+"-rwxr-x-r-x": là một tập hợp quyền thích hợp cho một shell script mà bạn viết và muốn 
+tất cả các người dùng khác có thể thực thi 
+b. 
+=== PAGE 15 ===
+"drwxr-x---": cho phép tất cả các người dùng liệt kê nội dung của thư mục này 
+c. 
+"-r--r--r--": là chỉ đọc (read-only) cho tất cả các người dùng 
+d. 
+"drwx------": là các quyền thích hợp cho một thư mục chứa thông tin cá nhân của bạn 
+Câu hỏi 33 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Công nghệ nào ghép nhiều ổ đĩa cứng vật lí thành một hệ thống ổ đĩa cứng có chức 
+năng làm tăng tốc độ đọc/ghi hoặc làm tăng tính an toàn cho dữ liệu chứa trên hệ thống 
+ổ đĩa hoặc là kết hợp cả hai yếu tố trên? 
+Câu hỏi 33Select one: 
+a. 
+SCSI (Small Computer Systems Interface) 
+b. 
+SSD (Solid-state drive) 
+c. 
+Sao lưu dữ liệu (data backup) 
+d. 
+RAID (Redundant Arrays of Independent Disks) 
+Câu hỏi 34 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Lệnh nào sau đây cho phép đưa người dùng tmtuan ra khỏi nhóm wheel 
+Câu hỏi 34Select one: 
+a. 
+userdel -d wheel tmtuan 
+b. 
+gpasswd -d tmtuan wheel 
+c. 
+usermod -aG tmtuan wheel 
+d. 
+userdel -d tmtuan wheel 
+=== PAGE 16 ===
+Câu hỏi 35 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Lệnh nào cho phép xem trạng thái của dịch httpd? 
+Câu hỏi 35Select one: 
+a. 
+systemctl status httpd 
+b. 
+service httpd start 
+c. 
+systemctl restart httpd 
+d. 
+service httpd restart 
+Câu hỏi 36 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Bạn chỉ muốn đăng nhập vào máy tính Linux/CentOS với tư cách người dùng root cho 
+việc bảo trì hệ thống. Bạn sẽ khởi động máy tính vào runlevel nào? 
+Câu hỏi 36Select one: 
+a. 
+1 
+b. 
+3 
+c. 
+0 
+d. 
+2 
+Câu hỏi 37 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Để CHỈ cho phép những người dùng thuộc nhóm người dùng bangiamdoc truy cập từ 
+xa tới hệ thống thông qua dịch vụ ssh, chúng ta phải? 
+=== PAGE 17 ===
+Câu hỏi 37Select one: 
+a. 
+Thêm dòng AllowGroups bangiamdoc vào tập tin /etc/ssh/sshd_config 
+b. 
+Thêm dòng DenyGroups bangiamdoc vào tập tin /etc/ssh/sshd_config 
+c. 
+Thêm dòng AllowUsers bangiamdoc vào tập tin /etc/ssh/sshd_config 
+d. 
+Thêm dòng DenyUsers bangiamdoc vào tập tin /etc/ssh/sshd_config 
+Câu hỏi 38 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Phát biểu nào sau đây về lệnh sudo là SAI? 
+Câu hỏi 38Select one: 
+a. 
+Các lệnh thực hiện với quyền sudo sẽ KHÔNG được ghi nhật ký (log) lại 
+b. 
+Có thể giới hạn quyền sudo của người dùng chỉ có thể thực hiện các thao tác về mạng 
+(networking) 
+c. 
+Lệnh sudo cho phép người dùng thực thi các lệnh với quyền của một người dùng khác 
+d. 
+Với lệnh sudo chúng ta không cần phải chia sẻ mật khẩu tài khoàn root cho nhiều 
+người 
+Câu hỏi 39 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Với nội dung tập tin /etc/sudoers như bên dưới, lệnh nào sau đây có thể cho người 
+dùng tmtuan có quyền sudo? Biết rằng nhóm người dùng wheel, bangiamdoc, 
+sudo đã được tạo sẵn. 
+ 
+Câu hỏi 39Select one: 
+
+=== PAGE 18 ===
+a. 
+usermod -aG sudo tmtuan 
+b. 
+usermod -aG wheel tmtuan 
+c. 
+usermod -aG bangiamdoc tmtuan 
+d. 
+usermod -aG tmtuan wheel 
+Câu hỏi 40 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Thiết bị mạng nào hoạt động ở tầng Datalink của mô hình TCP/IP, cho phép nối kết 
+mạng các thiết bị theo hình sao (star)? 
+Câu hỏi 40Select one: 
+a. 
+Firewall 
+b. 
+Switch 
+c. 
+Router 
+d. 
+Hub 
+Câu hỏi 41 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Phát biểu nào sau đây là SAI về tài khoản người dùng? 
+Câu hỏi 41Select one: 
+a. 
+Một tài khoản người dùng luôn được kết hợp với một tên người đùng và một số định 
+danh (UID) 
+b. 
+Có thể tạo tài khoản người dùng mới có số định danh (UID) trùng với số định danh của 
+người dùng root 
+c. 
+=== PAGE 19 ===
+Một người dùng khi mới được tạo mặc định không là thành viên của một nhóm (group) 
+nào và có thể được hiệu chỉnh để trở thành thành viên của nhiều nhóm khác nhau 
+d. 
+Thông tin tài khoản người dùng cục bộ được lưu trữ trong tập tin /etc/passwd 
+Câu hỏi 42 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Trên hệ điều hành CentOS, tập tin nhật ký (log file) nào chứa thông tin về các sư kiện 
+liên quan đến an ninh hệ thống? 
+Câu hỏi 42Select one: 
+a. 
+/var/log/messages 
+b. 
+/var/log/secure 
+c. 
+/etc/log/secure 
+d. 
+/etc/log/messages 
+Câu hỏi 43 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Mô hình mạng TCP/IP bao gồm các tầng theo thứ tự là? 
+Câu hỏi 43Select one: 
+a. 
+Application → Transport → Data link →Physical 
+b. 
+Application → Network → Data link → Transport →Physical 
+c. 
+Application → Network → Data link →Physical 
+d. 
+Application → Transport → Network → Data link →Physical 
+Câu hỏi 44 
+=== PAGE 20 ===
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Phát biểu nào về việc theo dõi hệ thống (monitoring) là sau đây SAI? 
+Câu hỏi 44Select one: 
+a. 
+Theo dõi hệ thống cung cấp dữ liệu cần thiết cho công việc quản trị hệ thống 
+b. 
+Theo dõi hệ thống giúp nhanh chóng phát hiện và xử lý các sự cố trong hệ thống 
+c. 
+Theo dõi hệ thống chỉ có thể thực ở chế độ thời gian thực (real-time) 
+d. 
+Theo dõi hệ thống giúp dự đoán và tránh những sự cố cho hệ thống trong tương lai 
+Câu hỏi 45 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Giải pháp nào sau đây KHÔNG giải quyết vấn đề thiếu địa chỉ của IPv4? 
+Câu hỏi 45Select one: 
+a. 
+DNS 
+b. 
+CIDR 
+c. 
+IPv6 
+d. 
+NAT 
+Câu hỏi 46 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+512B đầu tiên của ổ đĩa khởi động (chế độ BIOS) chứa thông tin gì? 
+Câu hỏi 46Select one: 
+a. 
+Chứa đoạn mã kiểm tra lỗi trên ổ đĩa 
+=== PAGE 21 ===
+b. 
+Chứa đoạn mã đơn giản hóa của nhân hệ điều hành 
+c. 
+Chứa bảng phân khu (partition table) và đoạn mã để chạy boot loader 
+d. 
+Chứa đoạn mã kiểm tra các thành phần phần cứng máy tính 
+Câu hỏi 47 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Lệnh nào sao đây sẽ tự động phân quyền mặc nhiên trên các thư mục mới được tạo 
+ra: 
++ Chủ sở hữu có cả 3 quyền read, write, execute; 
++ Nhóm chủ sở hữu có quyền read, execute; 
++ Những người khác không có quyền gì. 
+Câu hỏi 47Select one: 
+a. 
+chmod 720 
+b. 
+umask 720 
+c. 
+umask 027 
+d. 
+chmod 027 
+Câu hỏi 48 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Phát biểu nào sau là SAI? 
+Câu hỏi 48Select one: 
+a. 
+Tài khoản root có UID là 0 
+b. 
+Không thể có nhiều tài khoản người dùng trùng tên đăng nhập (username) 
+c. 
+=== PAGE 22 ===
+Không thể đổi UID của tài khoản root 
+d. 
+Tên đăng nhập (username) có thể chứa ký tự viết hoa 
+Câu hỏi 49 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Phát biểu nào sau đây là SAI? 
+Câu hỏi 49Select one: 
+a. 
+Lệnh yum update cập nhật tất cả gói phần mềm có trên hệ thống 
+b. 
+Có thể gở bỏ các gói phần mềm đã được cài đặt bằng lệnh yum remove 
+c. 
+Có thể tạo kho phần mềm (repository) riêng thay vì dùng các kho phần mềm có sẵn 
+d. 
+Các gói phần mềm trên hệ điều hành Red Hat/CentOS có định dạng là deb 
+Câu hỏi 50 
+Chưa trả lời 
+Đặt cờ 
+Đoạn văn câu hỏi 
+Các phát biểu sau đây về trách nhiệm nghề nghiệp của một người quản trị hệ thống là 
+ĐÚNG (True) hay SAI (False)? 
+1) Liên tục học tập kiến thức chuyên môn để thực hiện tốt công việc 
+2) Tuyệt đối tôn trọng quyền riêng tư về thông tin và dữ liệu của các người dùng khác 
+trong hệ thống 
+3) Tuân thủ các qui trình làm việc để tránh các sự cố nghề nghiệp. 
+  
+Câu hỏi 50Trả lời 
+Đúng 
+Sai 
+ 

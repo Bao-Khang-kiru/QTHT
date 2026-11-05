@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đề thi thử Quản trị hệ thống (Linux/CentOS) - Hệ thống ELSE / BK-LMS</title>
+  <meta name="description" content="Hệ thống thi trắc nghiệm trực tuyến chuẩn ELSE / Moodle dành cho sinh viên đại học - Môn Quản trị hệ thống." />
+  
+  <!-- Favicon icon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230284c7'><path d='M12 2L1 7l11 5 9-4.09V17h2V7L12 2z'/></svg>" type="image/svg+xml" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ================= SITE HEADER ================= -->
+  <header class="site-header">
+    <div class="header-top">
+      <div class="brand-area">
+        <div class="brand-logo" title="ELSE - E-Learning System Environment">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L1 7l11 5 9-4.09V17h2V7L12 2zM3.46 8.77L12 12.65l8.54-3.88L12 4.88 3.46 8.77zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+          </svg>
+        </div>
+        <div class="brand-info">
+          <h1>
+            <span>HỆ THỐNG THI TRỰC TUYẾN</span>
+            <span class="system-badge">BK-LMS / ELSE</span>
+          </h1>
+          <p>Khoa Khoa học & Kỹ thuật Máy tính • CO3013 / IT3010</p>
+        </div>
+      </div>
+
+      <div class="header-tools">
+        <!-- User Badge -->
+        <div class="user-badge" id="btn-user-edit" title="Nhấn để đổi tên & MSSV">
+          <div class="user-avatar" id="user-avatar-display">A</div>
+          <div class="user-details">
+            <span class="user-name" id="user-name-display">Nguyễn Văn A</span>
+            <span class="user-mssv" id="user-mssv-display">MSSV: 20261234</span>
+          </div>
+        </div>
+
+        <!-- Sound Toggle -->
+        <button class="tool-btn" id="btn-sound" title="Bật/Tắt âm thanh hiệu ứng">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+          <span>Âm thanh</span>
+        </button>
+
+        <!-- Dark/Light Theme Toggle -->
+        <button class="tool-btn" id="btn-theme" title="Đổi giao diện Sáng / Tối">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <span>Tối</span>
+        </button>
+
+        <!-- Fullscreen Toggle -->
+        <button class="tool-btn" id="btn-fullscreen" title="Chế độ toàn màn hình (Tập trung thi)">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Breadcrumb Bar -->
+    <div class="breadcrumb-bar">
+      <div class="breadcrumbs">
+        <a href="#">Trang chủ</a>
+        <span>/</span>
+        <a href="#">Các khoá học của tôi</a>
+        <span>/</span>
+        <a href="#">Quản trị hệ thống</a>
+        <span>/</span>
+        <span class="current">Đề thi thử 50 câu (Linux/CentOS)</span>
+      </div>
+
+      <div class="mode-pills">
+        <div class="mode-pill exam" id="current-mode-pill">
+          <span>⏱️</span> Chế độ Thi tính giờ
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= EXAM BANNER ================= -->
+  <section class="exam-banner">
+    <div class="banner-content">
+      <div class="exam-meta">
+        <h2>Đề thi thử Quản trị hệ thống (Linux / CentOS)</h2>
+        <div class="exam-tags">
+          <div class="exam-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span>Thời gian: <strong>50 phút</strong></span>
+          </div>
+          <div class="exam-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            <span>Tổng số: <strong>50 câu hỏi</strong></span>
+          </div>
+          <div class="exam-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <span>Điểm tối đa: <strong>10,00</strong> (0.2đ / câu)</span>
+          </div>
+          <div class="exam-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <span>Điểm đạt: <strong>≥ 5,00 điểm</strong></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="banner-actions">
+        <!-- Mode switches -->
+        <button class="btn btn-outline btn-sm" id="btn-mode-exam" title="Thi bấm giờ nghiêm túc 50 phút">
+          ⏱️ Thi tính giờ
+        </button>
+        <button class="btn btn-outline btn-sm" id="btn-mode-study" title="Ôn tập - Cho phép kiểm tra đáp án và đọc giải thích ngay">
+          📖 Ôn thi (Xem lời giải)
+        </button>
+        <button class="btn btn-outline btn-sm" id="btn-shuffle" title="Xáo trộn ngẫu nhiên thứ tự các câu hỏi">
+          🔀 Đảo câu hỏi
+        </button>
+        <button class="btn btn-outline btn-sm" id="btn-reset" title="Làm lại bài thi từ đầu">
+          🔄 Làm lại
+        </button>
+        <!-- Finish Attempt Button -->
+        <button class="btn btn-danger" id="btn-submit-top">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+          Nộp bài và kết thúc...
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MAIN LAYOUT ================= -->
+  <main class="main-layout">
+    <!-- Question Stream Column -->
+    <div class="stream-container">
+      <!-- Filter Bar -->
+      <div class="stream-header">
+        <div class="filter-pills">
+          <button class="filter-pill active" data-filter="all">Tất cả (<span data-filter-count="all">50</span>)</button>
+          <button class="filter-pill" data-filter="unanswered">Chưa làm (<span data-filter-count="unanswered" id="unanswered-count-badge">50</span>)</button>
+          <button class="filter-pill" data-filter="answered">Đã làm (<span data-filter-count="answered">0</span>)</button>
+          <button class="filter-pill" data-filter="flagged">Đã đặt cờ (<span data-filter-count="flagged">0</span>)</button>
+          <button class="filter-pill" data-filter="wrong" style="display:none; color:#dc2626; border-color:#fca5a5;">Câu làm sai (<span data-filter-count="wrong">0</span>)</button>
+        </div>
+
+        <div class="stream-controls">
+          <span style="font-size:0.78rem; color:var(--text-muted);">
+            💡 Tự động lưu tiến độ vào trình duyệt
+          </span>
+        </div>
+      </div>
+
+      <!-- Container where question cards are injected -->
+      <div id="question-stream"></div>
+    </div>
+
+    <!-- Right Sidebar (Sticky Quiz Navigation) -->
+    <aside class="sidebar-container" id="sidebar-container">
+      <div class="sticky-nav-card">
+        <div class="nav-card-header">
+          <h3>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            Điều hướng bài kiểm tra
+          </h3>
+        </div>
+
+        <!-- Timer Card -->
+        <div class="timer-box" id="timer-box">
+          <div class="timer-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            Thời gian còn lại
+          </div>
+          <div class="timer-clock" id="timer-clock">50:00</div>
+        </div>
+
+        <!-- Progress Summary -->
+        <div class="nav-progress-card">
+          <div style="display:flex; justify-content:space-between;">
+            <span id="progress-text">Đã hoàn thành: 0/50 câu (0%)</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="progress-bar-fill"></div>
+          </div>
+        </div>
+
+        <!-- 50 Question Buttons Grid -->
+        <div class="nav-grid" id="nav-grid">
+          <!-- Injected via app.js -->
+        </div>
+
+        <!-- Submit Attempt Button -->
+        <div class="submit-btn-area">
+          <button class="btn btn-danger" style="width:100%;" id="btn-submit-nav">
+            Nộp bài và kết thúc...
+          </button>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- ================= MOBILE NAVIGATION BAR ================= -->
+  <div class="mobile-nav-bar">
+    <div style="display:flex; align-items:center; gap:0.5rem;">
+      <span style="font-weight:700; font-family:var(--font-mono); color:#38bdf8;" id="mobile-timer">50:00</span>
+    </div>
+    <div style="display:flex; gap:0.5rem;">
+      <button class="btn btn-sm btn-outline" id="mobile-nav-toggle">
+        📋 Danh sách 50 câu
+      </button>
+      <button class="btn btn-sm btn-danger" id="mobile-submit-btn">
+        Nộp bài
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= MODAL BACKDROP & CONTAINER ================= -->
+  <div class="modal-backdrop" id="modal-backdrop">
+    <div id="modal-container"></div>
+  </div>
+
+  <!-- ================= LIGHTBOX MODAL FOR ZOOMING IMAGES ================= -->
+  <div class="lightbox-modal" id="lightbox-modal">
+    <img id="lightbox-img" src="" alt="Hình phóng to" />
+  </div>
+
+  <!-- ================= SCRIPTS ================= -->
+  <!-- 1. Embedded / Local Quiz Data (50 Questions with full explanations & base64 screenshots) -->
+  <script src="assets/js/quiz-data.js"></script>
+  <!-- 2. Application Logic & University ELSE Experience -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
